@@ -1,9 +1,10 @@
 require 'rubygems'
 require 'selenium-webdriver'
 
+SITE = "https://the-internet.herokuapp.com/"
 driver = Selenium::WebDriver.for :chrome
+driver.get (SITE)
 
-driver.get "https://the-internet.herokuapp.com/"
 
 input = ['u','m','e','d']
 
@@ -18,5 +19,4 @@ input.each{
 	puts ans
 }
 
-sleep(2)
 driver.quit
